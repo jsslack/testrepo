@@ -6,6 +6,6 @@ def change():
     return
 ```
 docstringggg
-ayyyyyyy lmaoooooooo
+ayyyyyyy lmao
 ```
 
