@@ -1,6 +1,6 @@
 name: Livehelp
 source: my-sql
 type: raw_sql
-rawSql: Select * from globeteq_cms.livehelp_questions
+rawSql: Select * from globeteq_cms.livehelp_questions limit 10
 tableName: globeteq_cms.livehelp_questions
 primaryKey: id
