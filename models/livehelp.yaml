@@ -1,0 +1,5 @@
+name: Livehelp
+source: my-sql
+type: table
+tableName: globeteq_cms.livehelp_questions
+primaryKey: id

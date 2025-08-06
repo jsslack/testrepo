@@ -1,0 +1,5 @@
+name: JS BigQuery Model
+source: js-test-big-query
+type: table
+tableName: Crap_CSV.Crap
+primaryKey: string_field_0

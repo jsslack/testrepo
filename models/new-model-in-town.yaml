@@ -1,0 +1,7 @@
+name: New Model in Town
+source: google-sheets
+type: custom
+customQuery:
+  name: Sheet1
+  type: sheet
+primaryKey: fds

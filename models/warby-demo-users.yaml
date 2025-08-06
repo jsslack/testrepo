@@ -1,0 +1,5 @@
+name: Warby Demo Users
+source: PostgreSQL-741da
+type: table
+tableName: public.warby_demo_users
+primaryKey: id
