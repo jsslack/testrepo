@@ -1,0 +1,14 @@
+model: new-model-in-town
+destination: slack
+config:
+  mode: message
+  channel: C1ZCJ50PN
+  mappings: []
+  addedBody: ayyy lmao
+  isBlockKit: false
+  rowsPerBatch: 10
+  skipFirstRun: false
+  configVersion: 1
+schedule:
+  type: manual
+schedulePaused: false
