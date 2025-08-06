@@ -1,0 +1,42 @@
+# READ ONLY FILE
+# Changes made here will be ignored. Please use the Hightouch dashboard to create and edit sources and destinations.
+
+sources:
+  my-sql:
+    name: MySQL
+    type: mysql
+  PostgreSQL-741da:
+    name: Clone of postgres
+    type: postgres
+  js-test-big-query:
+    name: JS Test BigQuery
+    type: bigquery
+  js-test-airtable:
+    name: JS Test Airtable
+    type: airtable
+  google-sheets:
+    name: Google Sheets
+    type: googlesheets
+destinations:
+  google-drive:
+    name: Google Drive
+    type: googleDrive
+  xero:
+    name: Xero
+    type: xero
+  http-request:
+    name: HTTP Request
+    type: webhookV2
+  google-sheets:
+    name: Google Sheets
+    type: googlesheets
+  js-test-box:
+    name: JS Test Box
+    type: box
+  slack:
+    name: Jake's Jazz
+    type: slack
+  sftp:
+    name: SFTP
+    type: sftp
+slug: manifest-jake-testing
