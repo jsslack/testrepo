@@ -11,7 +11,7 @@ config:
       type: standard
     - to: row_num
       type: template
-      template: '=TO_PERCENTAGE({{ row.number }})'
+      template: '=TO_PERCENT({{ row.number }})'
   sheetName: Sheet1
   asUserEntered: true
   configVersion: 2
