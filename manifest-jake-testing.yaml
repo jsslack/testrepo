@@ -2,6 +2,9 @@
 # Changes made here will be ignored. Please use the Hightouch dashboard to create and edit sources and destinations.
 
 sources:
+  sftp:
+    name: SFTP
+    type: sftp
   my-sql:
     name: MySQL
     type: mysql
@@ -18,6 +21,9 @@ sources:
     name: Google Sheets
     type: googlesheets
 destinations:
+  microsoft-bing-ads:
+    name: Microsoft Bing Ads
+    type: bingads
   google-drive:
     name: Google Drive
     type: googleDrive
