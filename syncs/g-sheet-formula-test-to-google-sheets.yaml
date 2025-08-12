@@ -8,6 +8,10 @@ config:
   configVersion: 2
   sheetSelection: select
   autoSyncColumns: true
+  spreadsheetInfo:
+    id: 10Rm6uHTfx21zofAaE8Ex5tj9MtKRTERiQto1uUy83pU
+    name: Formula Test
+    parent: 0AHB7_51WughOUk9PVA
   truncateColumns: true
 schedule:
   type: manual
