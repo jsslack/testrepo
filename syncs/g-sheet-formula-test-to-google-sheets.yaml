@@ -2,12 +2,21 @@ model: g-sheet-formula-test
 destination: google-sheets
 config:
   mode: mirror
-  mappings: []
+  mappings:
+    - to: name
+      from: name
+      type: standard
+    - to: number
+      from: number
+      type: standard
+    - to: row_num
+      type: template
+      template: '=TO_PERCENTAGE({{ row.number }})'
   sheetName: Sheet1
   asUserEntered: true
   configVersion: 2
   sheetSelection: select
-  autoSyncColumns: true
+  autoSyncColumns: false
   spreadsheetInfo:
     id: 10Rm6uHTfx21zofAaE8Ex5tj9MtKRTERiQto1uUy83pU
     name: Formula Test
