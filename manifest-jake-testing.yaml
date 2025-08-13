@@ -21,6 +21,9 @@ sources:
     name: Google Sheets
     type: googlesheets
 destinations:
+  vitally:
+    name: Vitally
+    type: vitally
   microsoft-bing-ads:
     name: Microsoft Bing Ads
     type: bingads
