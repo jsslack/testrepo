@@ -12,7 +12,7 @@ config:
     - to: row_num
       type: template
       template: |
-        {{ row['number]­| cast: number | times: 100 | round: 0 }}
+        {{ row['number']­ | cast: number | times: 100 | round: 0 }}
   sheetName: Sheet1
   asUserEntered: true
   configVersion: 2
