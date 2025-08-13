@@ -11,7 +11,7 @@ config:
       type: standard
     - to: row_num
       type: template
-      template: '=IFERROR(TO_PERCENT({{ row.number }}), "show something")'
+      template: '{{ (row[''number''] ­* 100) | round(0) }}'
   sheetName: Sheet1
   asUserEntered: true
   configVersion: 2
