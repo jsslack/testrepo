@@ -24,4 +24,4 @@ config:
   truncateColumns: true
 schedule:
   type: manual
-schedulePaused: true
+schedulePaused: false
