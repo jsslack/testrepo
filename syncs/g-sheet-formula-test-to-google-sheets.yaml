@@ -11,7 +11,7 @@ config:
       type: standard
     - to: number
       type: template
-      template: '{{ row[''number''] | cast: ''number'' | times: 100 | round: 2 }}'
+      template: '{{ row[''number''] | times: 100 | round: 2 }}'
   sheetName: Sheet1
   asUserEntered: true
   configVersion: 2
