@@ -3,16 +3,16 @@ destination: google-sheets
 config:
   mode: mirror
   mappings:
+    - to: row_num
+      from: row_num
+      type: standard
     - to: name
       from: name
       type: standard
     - to: number
-      from: number
-      type: standard
-    - to: row_num
       type: template
       template: |
-        {{ row['number']­ | cast: number | times: 100 | round: 0 }}
+        {{ row['number']­ | times: 100 | round: 0 }}
   sheetName: Sheet1
   asUserEntered: true
   configVersion: 2
