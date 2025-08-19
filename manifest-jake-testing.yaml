@@ -21,6 +21,9 @@ sources:
     name: Google Sheets
     type: googlesheets
 destinations:
+  o-auth-testing:
+    name: OAuth Testing
+    type: webhookV2
   vitally:
     name: Vitally
     type: vitally
