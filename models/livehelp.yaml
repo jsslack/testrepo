@@ -1,6 +1,6 @@
 name: JS - Model Deployment Original (livehelp_questions)
 source: my-sql
-type: raw_sql
+type: table
 rawSql: Select * from globeteq_cms.livehelp_questions limit 10
-tableName: globeteq_cms.livehelp_questions
+tableName: vsug.auth_user
 primaryKey: id
