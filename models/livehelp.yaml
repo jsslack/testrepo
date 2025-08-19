@@ -1,4 +1,4 @@
-name: Livehelp
+name: JS - Model Deployment Original
 source: my-sql
 type: raw_sql
 rawSql: Select * from globeteq_cms.livehelp_questions limit 10
