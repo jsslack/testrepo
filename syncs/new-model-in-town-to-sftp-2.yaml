@@ -1,0 +1,18 @@
+model: new-model-in-town
+destination: sftp
+config:
+  mode: insert
+  path: testbad.json
+  fileType: json
+  mappings:
+    - to: Most abandoned lens styles
+      from: Most abandoned lens styles
+      type: standard
+  skipEmpty: true
+  concurrency: 1
+  configVersion: 1
+  autoSyncColumns: false
+  timestampOffsetSeconds: 0
+schedule:
+  type: manual
+schedulePaused: false
