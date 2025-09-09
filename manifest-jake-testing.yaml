@@ -2,6 +2,9 @@
 # Changes made here will be ignored. Please use the Hightouch dashboard to create and edit sources and destinations.
 
 sources:
+  giants-source:
+    name: Giants Source
+    type: mysql
   google-sheets-2:
     name: Google Sheets
     type: googlesheets
@@ -24,6 +27,9 @@ sources:
     name: Google Sheets
     type: googlesheets
 destinations:
+  giants:
+    name: Giants
+    type: mysql-destination
   my-sql:
     name: HT Test MySQL
     type: mysql-destination
