@@ -13,6 +13,9 @@ config:
     - to: number
       type: template
       template: '{{ row[''number''] | times: 100 | round: 2 }}'
+    - to: name2
+      from: name
+      type: standard
   sheetName: Sheet1
   asUserEntered: true
   configVersion: 2
