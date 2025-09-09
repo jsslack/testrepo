@@ -24,6 +24,9 @@ sources:
     name: Google Sheets
     type: googlesheets
 destinations:
+  my-sql:
+    name: HT Test MySQL
+    type: mysql-destination
   o-auth-testing:
     name: OAuth Testing
     type: webhookV2
