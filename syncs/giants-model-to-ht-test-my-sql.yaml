@@ -10,7 +10,6 @@ config:
     - to: jersey_number
       from: jersey_number
       type: standard
-      ignoreNull: true
   batchSize: 1000
   configVersion: 0
   externalIdMapping:
