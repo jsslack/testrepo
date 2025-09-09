@@ -6,6 +6,7 @@ config:
     - to: row_num
       from: row_num
       type: standard
+      ignoreNull: true
     - to: name
       from: name
       type: standard
