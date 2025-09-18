@@ -4,13 +4,16 @@ config:
   mode: all
   path: /home/hightouchtest/ht.ayyyy.xyz/rolando-{HH:MM:ss}.csv
   fileType: csv
-  mappings: []
+  mappings:
+    - to: EMAIL
+      type: template
+      template: '{{ row[''email''] | md5 }}'
   delimiter: ','
   skipEmpty: true
   concurrency: 1
   configVersion: 1
   includeHeader: true
-  autoSyncColumns: true
+  autoSyncColumns: false
   csvRowDelimeter: auto
   stagingDirectory: /home/hightouchtest/ht.ayyyy.xyz
   timestampOffsetSeconds: 0
