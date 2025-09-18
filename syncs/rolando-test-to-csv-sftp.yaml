@@ -1,8 +1,8 @@
 model: rolando-test
 destination: csv-sftp
 config:
-  mode: insert
-  path: rolando.csv
+  mode: all
+  path: /home/hightouchtest/ht.ayyyy.xyz/rolando.csv
   fileType: csv
   mappings: []
   delimiter: ','
