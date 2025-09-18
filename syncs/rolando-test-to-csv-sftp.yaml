@@ -1,0 +1,23 @@
+model: rolando-test
+destination: csv-sftp
+config:
+  mode: all
+  path: /home/hightouchtest/ht.ayyyy.xyz/rolando.csv
+  fileType: csv
+  mappings:
+    - to: EMAIL
+      type: template
+      template: '{{ row[''EMAIL''] | md5 }}'
+    - to: EMAIL RAW
+      from: EMAIL
+      type: standard
+  delimiter: ','
+  skipEmpty: true
+  concurrency: 1
+  configVersion: 1
+  autoSyncColumns: false
+  csvRowDelimeter: auto
+  timestampOffsetSeconds: 0
+schedule:
+  type: manual
+schedulePaused: false
