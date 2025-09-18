@@ -9,6 +9,7 @@ config:
   skipEmpty: true
   concurrency: 1
   configVersion: 1
+  includeHeader: true
   autoSyncColumns: true
   csvRowDelimeter: auto
   stagingDirectory: /home/hightouchtest/ht.ayyyy.xyz
