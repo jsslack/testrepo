@@ -7,7 +7,10 @@ config:
   mappings:
     - to: HASHSED
       type: template
-      template: '{{ row[''email''] }}'
+      template: |-
+        {% for address in email %}
+          {{ address }}
+        {% endfor %}
     - to: EMAIL
       from: EMAIL
       type: standard
