@@ -13,7 +13,7 @@ config:
       type: standard
     - to: EMAIL (TEMPLATE)
       type: template
-      template: '{{ row[''EMAIL''] }}'
+      template: '{{ row[''EMAIL''] | md5 }}'
   delimiter: ','
   skipEmpty: true
   concurrency: 1
