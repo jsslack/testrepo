@@ -4,19 +4,13 @@ config:
   mode: all
   path: /home/hightouchtest/ht.ayyyy.xyz/rolando-{mm}.csv
   fileType: csv
-  mappings:
-    - to: EMAIL
-      type: template
-      template: '{{ row[''EMAIL''] | md5 }}'
-    - to: Email Raw
-      from: EMAIL
-      type: standard
+  mappings: []
   delimiter: ','
   skipEmpty: true
   concurrency: 1
   configVersion: 1
   includeHeader: true
-  autoSyncColumns: false
+  autoSyncColumns: true
   csvRowDelimeter: auto
   timestampOffsetSeconds: 0
 schedule:
