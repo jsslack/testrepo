@@ -1,0 +1,7 @@
+name: Rolando Test
+source: rolando-test
+type: custom
+customQuery:
+  name: Sheet1
+  type: sheet
+primaryKey: EMAIL
