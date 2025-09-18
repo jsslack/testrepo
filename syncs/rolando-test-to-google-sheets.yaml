@@ -1,0 +1,22 @@
+model: rolando-test
+destination: google-sheets
+config:
+  mode: mirror
+  mappings:
+    - to: hashed
+      type: template
+      template: '{{ row[''EMAIL''] | md5 }}'
+    - to: EMAIL
+      from: EMAIL
+      type: standard
+  sheetName: Sheet1
+  configVersion: 2
+  sheetSelection: select
+  autoSyncColumns: false
+  spreadsheetInfo:
+    id: 1EcWi7kdylSpqaLphOmIOEgaTHyd8nHTRsTxBs8GlwrU
+    name: Untitled spreadsheet
+    parent: 0AHB7_51WughOUk9PVA
+schedule:
+  type: manual
+schedulePaused: false
