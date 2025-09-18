@@ -7,7 +7,7 @@ config:
   mappings:
     - to: HASHSED
       type: template
-      template: '{{ row[''email''] | join: "" }}'
+      template: '{{ row[''email''] | cast:''string'' }}'
     - to: EMAIL
       from: EMAIL
       type: standard
