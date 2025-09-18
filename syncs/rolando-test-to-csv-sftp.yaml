@@ -5,10 +5,10 @@ config:
   path: /home/hightouchtest/ht.ayyyy.xyz/rolando.csv
   fileType: csv
   mappings:
-    - to: EMAIL
+    - to: hashed
       type: template
       template: '{{ row[''EMAIL''] | md5 }}'
-    - to: EMAIL RAW
+    - to: EMAIL
       from: EMAIL
       type: standard
   delimiter: ','
