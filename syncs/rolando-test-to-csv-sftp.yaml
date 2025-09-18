@@ -8,8 +8,8 @@ config:
     - to: Email
       type: template
       template: '{{ row[''EMAIL''] | md5 }}'
-    - to: 'OTHER '
-      from: 'OTHER '
+    - to: EMAIL
+      from: EMAIL
       type: standard
   delimiter: ','
   skipEmpty: true
