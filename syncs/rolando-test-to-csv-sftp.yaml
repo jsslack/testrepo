@@ -5,9 +5,6 @@ config:
   path: /home/hightouchtest/ht.ayyyy.xyz/rolando-{YYYY-MM-DD HH:MM:ss}.csv
   fileType: csv
   mappings:
-    - to: 'OTHER '
-      from: 'OTHER '
-      type: standard
     - to: EMAIL
       type: template
       template: '{{ row[''EMAIL''] | md5 }}'
