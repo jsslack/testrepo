@@ -2,7 +2,7 @@ model: rolando-test
 destination: csv-sftp
 config:
   mode: all
-  path: /home/hightouchtest/ht.ayyyy.xyz/rolando.csv
+  path: /home/hightouchtest/ht.ayyyy.xyz/rolando-HH:MM:ss.csv
   fileType: csv
   mappings:
     - to: 'OTHER '
