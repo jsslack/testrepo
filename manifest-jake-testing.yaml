@@ -30,6 +30,9 @@ sources:
     name: Google Sheets
     type: googlesheets
 destinations:
+  csv-sftp:
+    name: CSV SFTP
+    type: sftp
   giants:
     name: Giants
     type: mysql-destination
