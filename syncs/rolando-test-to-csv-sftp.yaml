@@ -1,0 +1,17 @@
+model: rolando-test
+destination: csv-sftp
+config:
+  mode: all
+  path: /home/hightouchtest/ht.ayyyy.xyz/rolando-{YY}-{MM}-{DD} {HH}:{MM}:{ss}
+  fileType: csv
+  mappings: []
+  delimiter: ','
+  skipEmpty: true
+  concurrency: 1
+  configVersion: 1
+  autoSyncColumns: true
+  csvRowDelimeter: auto
+  timestampOffsetSeconds: 0
+schedule:
+  type: manual
+schedulePaused: false
