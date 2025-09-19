@@ -5,9 +5,9 @@ config:
   mappings:
     - to: hashed
       type: template
-      template: |
+      template: |-
         {% assign emails = row['EMAIL'] | split: ', ' %}
-          [{% for email in emails %}{{ email | strip | remove: '"' | remove: '[' | remove: ']' | md5 }}{% unless forloop.last %},{% endunless %}{% endfor %}]
+          [{% for email in emails %}"{{ email | strip | remove: '"' | remove: '[' | remove: ']' | md5 }}"{% unless forloop.last %},{% endunless %}{% endfor %}]
     - to: EMAIL
       from: EMAIL
       type: standard
