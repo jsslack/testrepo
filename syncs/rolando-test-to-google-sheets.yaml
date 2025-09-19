@@ -5,7 +5,7 @@ config:
   mappings:
     - to: hashed
       type: template
-      template: '{{ row[''EMAIL''] | md5 }}'
+      template: '{{ row[''EMAIL''] | split: '', '' | map: ''md5'' }}'
     - to: EMAIL
       from: EMAIL
       type: standard
