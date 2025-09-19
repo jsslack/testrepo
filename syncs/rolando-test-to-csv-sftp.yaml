@@ -5,19 +5,23 @@ config:
   path: /home/hightouchtest/ht.ayyyy.xyz/rolando.csv
   fileType: csv
   mappings:
+    - to: EMAIL
+      from: EMAIL
+      type: standard
     - to: hashed
       type: template
       template: |-
         {% for address in row.email %}
           {{ address | md5 }}
         {% endfor %}
-    - to: EMAIL
-      from: EMAIL
+    - to: 'OTHER '
+      from: 'OTHER '
       type: standard
   delimiter: ','
   skipEmpty: true
   concurrency: 1
   configVersion: 1
+  includeHeader: true
   autoSyncColumns: false
   csvRowDelimeter: auto
   timestampOffsetSeconds: 0
