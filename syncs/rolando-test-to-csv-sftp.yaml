@@ -8,9 +8,9 @@ config:
     - to: hashed
       type: template
       template: |-
-        {%- for item in row['EMAIL'] -%}
-            {%- item | md5 -%}
-        {%- endfor -%}
+        {% for address in row.email %}
+          {{ address | md5 }}
+        {% endfor %}
     - to: EMAIL
       from: EMAIL
       type: standard
