@@ -11,6 +11,9 @@ config:
     - to: EMAIL
       from: EMAIL
       type: standard
+    - to: OTHER 2
+      from: 'OTHER '
+      type: standard
   sheetName: Sheet1
   configVersion: 2
   sheetSelection: select
