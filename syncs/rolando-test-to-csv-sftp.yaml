@@ -20,7 +20,7 @@ config:
     - to: tz
       type: template
       template: >-
-        {{ rcontext['timestamp'] | date: '%s' | minus: 25200 | date:
+        {{ context['timestamp'] | date: '%s' | minus: 25200 | date:
         '%Y-%m-%dT%H:%M:%S' }}
   delimiter: ','
   skipEmpty: true
