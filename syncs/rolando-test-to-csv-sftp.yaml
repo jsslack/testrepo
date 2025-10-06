@@ -19,9 +19,7 @@ config:
       type: standard
     - to: tz
       type: template
-      template: >-
-        {{ context['timestamp'] | to_unix | minus: 25200000 | date: "%Y-%m-%d
-        %H:%M:%S"}}
+      template: '{{ context[''timestamp''] }}'
   delimiter: ','
   skipEmpty: true
   concurrency: 1
