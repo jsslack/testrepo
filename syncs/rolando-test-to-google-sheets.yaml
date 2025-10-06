@@ -14,6 +14,11 @@ config:
     - to: OTHER 2
       from: 'OTHER '
       type: standard
+    - to: TEST_TZ
+      type: template
+      template: >-
+        {{ context['timestamp'] | date: '%Y-%m-%d %H:%M:%S', 'America/Phoenix'
+        }}
   sheetName: Sheet1
   configVersion: 2
   sheetSelection: select
