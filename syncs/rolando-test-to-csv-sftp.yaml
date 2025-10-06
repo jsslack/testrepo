@@ -19,7 +19,7 @@ config:
       type: standard
     - to: tz
       type: template
-      template: '{{ context[''timestamp''] }}'
+      template: '{{ context[''timestamp''] | date: "%Y-%m-%d %H:%M" }}'
   delimiter: ','
   skipEmpty: true
   concurrency: 1
