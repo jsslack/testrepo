@@ -2,7 +2,7 @@ model: rolando-test
 destination: csv-sftp
 config:
   mode: all
-  path: /home/hightouchtest/ht.ayyyy.xyz/rolando.csv
+  path: /home/hightouchtest/ht.ayyyy.xyz/tz.csv
   fileType: csv
   mappings:
     - to: EMAIL
@@ -17,6 +17,11 @@ config:
     - to: 'OTHER '
       from: 'OTHER '
       type: standard
+    - to: tz
+      type: template
+      template: >-
+        {{ context['timestamp'] | to_unix | minus: 25200000 | date: "%Y-%m-%d
+        %H:%M:%S"}}
   delimiter: ','
   skipEmpty: true
   concurrency: 1
