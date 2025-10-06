@@ -16,7 +16,9 @@ config:
       type: standard
     - to: TEST_TZ
       type: template
-      template: '{{ context[''timestamp''] | date: "%Y-%m-%d %H:%M:%S", ''-7''}}'
+      template: >-
+        {{ context['timestamp'] | to_unix | minus: 25200000 | date: "%Y-%m-%d
+        %H:%M:%S"}}
   sheetName: Sheet1
   configVersion: 2
   sheetSelection: select
