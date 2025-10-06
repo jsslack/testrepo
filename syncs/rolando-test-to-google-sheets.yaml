@@ -15,8 +15,8 @@ config:
       from: 'OTHER '
       type: standard
     - to: TEST_TZ
-      type: variable
-      variable: current-timestamp
+      type: template
+      template: '{{ context[''timestamp''] | date: "%Y-%m-%d %H:%M:%S", ''-7''}}'
   sheetName: Sheet1
   configVersion: 2
   sheetSelection: select
