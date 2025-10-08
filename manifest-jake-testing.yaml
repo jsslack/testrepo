@@ -30,6 +30,9 @@ sources:
     name: Google Sheets
     type: googlesheets
 destinations:
+  google-sheets-service-account:
+    name: Google Sheets (Service Account)
+    type: googleSheetsSA
   csv-sftp:
     name: CSV SFTP
     type: sftp
