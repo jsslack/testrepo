@@ -1,7 +1,7 @@
 model: rolando-test
 destination: csv-sftp
 config:
-  mode: all
+  mode: diff
   path: /home/hightouchtest/ht.ayyyy.xyz/tz.csv
   fileType: csv
   mappings:
