@@ -1,8 +1,8 @@
 model: rolando-test
 destination: csv-sftp
 config:
-  mode: diff
-  path: /home/hightouchtest/ht.ayyyy.xyz/tz.csv
+  mode: all
+  path: test.csv
   fileType: csv
   mappings:
     - to: EMAIL
