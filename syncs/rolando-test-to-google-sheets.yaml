@@ -19,6 +19,10 @@ config:
       template: >-
         {{ context['timestamp'] | to_unix | minus: 25200000 | date: "%Y-%m-%d
         %H:%M:%S"}}
+    - to: DEAL
+      type: static
+      value: 'Check out {{ "now" | date: "%B" }}''s great deals'
+      valueType: STRING
   sheetName: Sheet1
   configVersion: 2
   sheetSelection: select
