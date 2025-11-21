@@ -1,0 +1,35 @@
+model: wicked-sick
+destination: csv-sftp
+config:
+  mode: all
+  path: test.csv
+  fileType: csv
+  mappings:
+    - to: EMAIL
+      from: EMAIL
+      type: standard
+    - to: hashed
+      type: template
+      template: |-
+        {% for address in row.email %}
+          {{ address | md5 }}
+        {% endfor %}
+    - to: 'OTHER '
+      from: 'OTHER '
+      type: standard
+    - to: tz
+      type: template
+      template: >-
+        {{ context['timestamp'] | date: '%s' | minus: 25200 | date:
+        '%Y-%m-%dT%H:%M:%S' }}
+  delimiter: ','
+  skipEmpty: true
+  concurrency: 1
+  configVersion: 1
+  includeHeader: true
+  autoSyncColumns: false
+  csvRowDelimeter: auto
+  timestampOffsetSeconds: 0
+schedule:
+  type: manual
+schedulePaused: true

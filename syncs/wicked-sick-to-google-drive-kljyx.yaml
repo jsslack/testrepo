@@ -1,0 +1,28 @@
+model: wicked-sick
+destination: google-drive
+config:
+  mode: all
+  path: rolando.csv
+  fileType: csv
+  mappings:
+    - to: HASHSED
+      type: template
+      template: |-
+        {% for address in email %}
+          {{ address }}
+        {% endfor %}
+    - to: EMAIL
+      from: EMAIL
+      type: standard
+  delimiter: ','
+  folderUrl: >-
+    https://drive.google.com/drive/folders/17sIAjYJ7K0lEInTuB0rFtgfqa6uBXyMh?usp=drive_link
+  skipEmpty: true
+  existingDoc: false
+  configVersion: 0
+  autoSyncColumns: false
+  csvRowDelimeter: auto
+  timestampOffsetSeconds: 0
+schedule:
+  type: manual
+schedulePaused: true
