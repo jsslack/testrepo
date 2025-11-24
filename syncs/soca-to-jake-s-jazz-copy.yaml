@@ -1,0 +1,15 @@
+model: soca
+destination: slack
+config:
+  mode: csv
+  channel: C1ZCJ50PN
+  mappings: []
+  addedBody: ❤️‍🔥
+  isBlockKit: false
+  rowsPerBatch: 10
+  skipFirstRun: true
+  configVersion: 1
+  autoSyncColumns: true
+schedule:
+  type: manual
+schedulePaused: true
