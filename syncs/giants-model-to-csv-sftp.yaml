@@ -1,0 +1,17 @@
+model: giants-model
+destination: csv-sftp
+config:
+  mode: insert
+  path: null.csv
+  fileType: csv
+  mappings: []
+  delimiter: ','
+  skipEmpty: true
+  concurrency: 1
+  configVersion: 1
+  autoSyncColumns: true
+  csvRowDelimeter: auto
+  timestampOffsetSeconds: 0
+schedule:
+  type: manual
+schedulePaused: false
