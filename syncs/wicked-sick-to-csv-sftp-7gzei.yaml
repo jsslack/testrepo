@@ -22,6 +22,12 @@ config:
       template: >-
         {{ context['timestamp'] | date: '%s' | minus: 25200 | date:
         '%Y-%m-%dT%H:%M:%S' }}
+    - to: null_test_1
+      type: template
+      template: '{{ NULL | to_date: "%Y-%m-%d %H:%M:%S.%L" | date: "%Y-%m-%d"}}'
+    - to: null_test_2
+      type: template
+      template: '{{ NULL | to_date | date: "%Y-%m-%d" }}'
   delimiter: ','
   skipEmpty: true
   concurrency: 1
