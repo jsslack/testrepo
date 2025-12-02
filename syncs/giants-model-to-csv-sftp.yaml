@@ -4,12 +4,20 @@ config:
   mode: insert
   path: null.csv
   fileType: csv
-  mappings: []
+  mappings:
+    - to: null_format
+      type: template
+      template: >-
+        {{ row['jersey_number'] | to_date: "%Y-%m-%d %H:%M:%S.%L" | date:
+        "%Y-%m-%d"}}
+    - to: no_null_format
+      type: template
+      template: '{{ row[''jersey_number''] | to_date | date: "%Y-%m-%d" }}'
   delimiter: ','
   skipEmpty: true
   concurrency: 1
   configVersion: 1
-  autoSyncColumns: true
+  autoSyncColumns: false
   csvRowDelimeter: auto
   timestampOffsetSeconds: 0
 schedule:
