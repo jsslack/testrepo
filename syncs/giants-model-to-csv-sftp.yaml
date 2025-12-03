@@ -1,8 +1,8 @@
 model: giants-model
 destination: csv-sftp
 config:
-  mode: insert
-  path: null.csv
+  mode: all
+  path: time_test.csv
   fileType: csv
   mappings:
     - to: null_format
