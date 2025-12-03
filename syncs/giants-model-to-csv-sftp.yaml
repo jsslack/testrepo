@@ -7,9 +7,7 @@ config:
   mappings:
     - to: null_format
       type: template
-      template: >-
-        {{ row['jersey_number'] | to_date: "%Y-%m-%d %H:%M:%S.%L" | date:
-        "%Y-%m-%d"}}
+      template: '{{ row[''jersey_number''] | to_date | date: "%Y-%m-%d"}}'
   delimiter: ','
   skipEmpty: true
   concurrency: 1
