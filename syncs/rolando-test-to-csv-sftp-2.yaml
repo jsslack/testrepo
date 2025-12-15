@@ -12,7 +12,7 @@ config:
       type: template
       template: |2
 
-         {{ row.emails | json }}
+         {{ row.email | json }}
   delimiter: ','
   skipEmpty: true
   concurrency: 1
