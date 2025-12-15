@@ -10,15 +10,7 @@ config:
       type: standard
     - to: email_fixed
       type: template
-      template: |2-
-         {% assign valid_emails = row.emails | slice: 0, 0 %}
-          {% for email in row.email %}
-            {% if email %}
-              {% assign trimmed = email | strip | downcase %}
-              {% assign valid_emails = valid_emails | push: trimmed %}
-            {% endif %}
-          {% endfor %}
-          {{ valid_emails | json }}
+      template: '  {{ row.email | map: "downcase" | json }}'
   delimiter: ','
   skipEmpty: true
   concurrency: 1
