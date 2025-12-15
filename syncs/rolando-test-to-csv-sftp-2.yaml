@@ -2,7 +2,7 @@ model: rolando-test
 destination: csv-sftp
 config:
   mode: all
-  path: email-split.csv
+  path: ht.ayyyy.xyz/email-split.csv
   fileType: csv
   mappings:
     - to: EMAIL
