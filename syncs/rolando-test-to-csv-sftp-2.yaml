@@ -9,6 +9,7 @@ config:
       from: EMAIL
       type: standard
     - to: emailz
+      from: emails
       type: template
       template: |2-
           {% assign valid_emails = "" | split: "" %}
