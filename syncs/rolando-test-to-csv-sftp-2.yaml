@@ -10,7 +10,7 @@ config:
       type: standard
     - to: email_fixed
       type: template
-      template: '  {{ row.email | map: "downcase" | json }}'
+      template: '{{ row.email | first }}'
   delimiter: ','
   skipEmpty: true
   concurrency: 1
