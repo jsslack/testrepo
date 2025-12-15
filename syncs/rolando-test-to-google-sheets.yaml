@@ -24,7 +24,7 @@ config:
       type: template
       template: |2-
           {% assign valid_emails = "" | split: "" %}
-          {% for email in row['emails'] %}
+          {% for email in row['email'] %}
             {% if email and email != "" %}
               {% assign trimmed = email | strip | downcase %}
               {% assign parts = trimmed | split: "@" %}
@@ -37,7 +37,7 @@ config:
               {% endif %}
             {% endif %}
           {% endfor %}
-          {{ valid_emails | remove_empty }}
+          {{ valid_emails | remove_empty }} 
   sheetName: Sheet1
   configVersion: 2
   sheetSelection: select
