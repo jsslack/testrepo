@@ -12,8 +12,9 @@ config:
       from: emails
       type: template
       template: |2-
+         {% assign email_array = row.EMAIL | parse %}
           {% assign valid_emails = "" | split: "" %}
-          {% for email in row.EMAIL %}
+          {% for email in email_array %}
             {% if email and email != "" %}
               {% assign trimmed = email | strip | downcase %}
               {% assign parts = trimmed | split: "@" %}
