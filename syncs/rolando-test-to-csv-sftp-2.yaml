@@ -10,7 +10,9 @@ config:
       type: standard
     - to: email_fixed
       type: template
-      template: '{{ row.email | first }}'
+      template: |2
+
+         {{ row.emails | json }}
   delimiter: ','
   skipEmpty: true
   concurrency: 1
