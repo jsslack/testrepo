@@ -30,6 +30,9 @@ sources:
     name: Google Sheets
     type: googlesheets
 destinations:
+  http-request-2:
+    name: HTTP Request
+    type: webhookV2
   google-sheets-service-account:
     name: Google Sheets (Service Account)
     type: googleSheetsSA
