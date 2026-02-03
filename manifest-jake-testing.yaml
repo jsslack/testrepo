@@ -30,6 +30,9 @@ sources:
     name: Google Sheets
     type: googlesheets
 destinations:
+  microsoft-bing-ads-2:
+    name: Microsoft Bing Ads
+    type: bingads
   http-request-2:
     name: HTTP Request
     type: webhookV2
