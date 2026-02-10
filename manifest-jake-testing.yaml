@@ -30,6 +30,9 @@ sources:
     name: Google Sheets
     type: googlesheets
 destinations:
+  braze-cohorts:
+    name: Braze Cohorts
+    type: brazeCohorts
   http-request-2:
     name: HTTP Request
     type: webhookV2
