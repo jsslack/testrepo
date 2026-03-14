@@ -30,6 +30,9 @@ sources:
     name: Google Sheets
     type: googlesheets
 destinations:
+  http-request-3:
+    name: HTTP Request
+    type: webhookV2
   ms-test-o-auth:
     name: MS Test OAuth
     type: webhookV2
