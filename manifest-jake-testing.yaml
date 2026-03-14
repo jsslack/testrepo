@@ -30,6 +30,9 @@ sources:
     name: Google Sheets
     type: googlesheets
 destinations:
+  ms-test-o-auth:
+    name: MS Test OAuth
+    type: webhookV2
   braze-cohorts:
     name: Braze Cohorts
     type: brazeCohorts
