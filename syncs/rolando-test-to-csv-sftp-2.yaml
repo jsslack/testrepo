@@ -1,0 +1,42 @@
+model: rolando-test
+destination: csv-sftp
+config:
+  mode: all
+  path: ht.ayyyy.xyz/email-split.csv
+  fileType: csv
+  mappings:
+    - to: EMAIL
+      from: EMAIL
+      type: standard
+    - to: emailz
+      from: emails
+      type: template
+      template: |2-
+         {% assign email_array = row.EMAIL | parse %}
+          {% assign valid_emails = "" | split: "" %}
+          {% for email in email_array %}
+            {% if email and email != "" %}
+              {% assign trimmed = email | strip | downcase %}
+              {% assign parts = trimmed | split: "@" %}
+              {% if parts.size == 2 %}
+                {% assign local = parts[0] %}
+                {% assign domain = parts[1] %}
+                {% assign domain_size = domain | size %}
+                {% if local != "" and domain contains "." and domain_size > 3 %}
+                  {% assign valid_emails = valid_emails | push: trimmed %}
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+          {{ valid_emails | json }}
+  delimiter: ','
+  skipEmpty: true
+  concurrency: 1
+  configVersion: 1
+  includeHeader: true
+  autoSyncColumns: false
+  csvRowDelimeter: auto
+  timestampOffsetSeconds: 0
+schedule:
+  type: manual
+schedulePaused: false

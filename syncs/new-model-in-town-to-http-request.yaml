@@ -1,0 +1,20 @@
+model: new-model-in-town
+destination: http-request
+config:
+  add:
+    method: GET
+    enabled: true
+    onError: retryNextSync
+    timeout: 30
+    rateLimit: 1000
+    hasRateLimit: true
+    rateLimitTime: second
+  change: {}
+  remove:
+    enabled: false
+    timeout: 30
+  skipFirstRun: true
+  configVersion: 1
+schedule:
+  type: manual
+schedulePaused: false

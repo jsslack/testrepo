@@ -1,0 +1,18 @@
+model: new-model-in-town
+destination: sftp
+config:
+  mode: all
+  path: new_sheet-{YYYY}-{MM}-{DD}.csv
+  fileType: csv
+  mappings: []
+  delimiter: ','
+  skipEmpty: true
+  concurrency: 1
+  configVersion: 1
+  includeHeader: true
+  autoSyncColumns: true
+  csvRowDelimeter: auto
+  timestampOffsetSeconds: 0
+schedule:
+  type: manual
+schedulePaused: false

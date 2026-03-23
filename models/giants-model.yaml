@@ -1,0 +1,5 @@
+name: Giants Model
+source: giants-source
+type: table
+tableName: jake_ht_tests.giants
+primaryKey: primary_key

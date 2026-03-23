@@ -1,0 +1,5 @@
+name: Soca
+source: my-sql
+type: table
+tableName: soca_artman.artman_category
+primaryKey: num

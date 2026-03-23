@@ -1,0 +1,5 @@
+name: Completed Orders
+source: PostgreSQL-741da
+type: table
+tableName: public.completed_orders
+primaryKey: id
