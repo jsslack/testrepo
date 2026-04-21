@@ -43,7 +43,7 @@ destinations:
     name: Braze Cohorts
     type: brazeCohorts
   http-request-2:
-    name: HTTP Request
+    name: "HTTP Request —\_alert test"
     type: webhookV2
   google-sheets-service-account:
     name: Google Sheets (Service Account)
