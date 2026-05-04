@@ -30,6 +30,9 @@ sources:
     name: Google Sheets
     type: googlesheets
 destinations:
+  display-and-video-360:
+    name: Display & Video 360
+    type: display-video
   http-request-4:
     name: HTTP Request
     type: webhookV2
