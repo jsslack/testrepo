@@ -1,0 +1,51 @@
+model: rolando-test
+destination: google-sheets
+config:
+  mode: mirror
+  mappings:
+    - to: hashed
+      type: template
+      template: |-
+        {% assign emails = row['EMAIL'] | split: ', ' %}
+          [{% for email in emails %}"{{ email | strip | remove: '"' | remove: '[' | remove: ']' | md5 }}"{% unless forloop.last %},{% endunless %}{% endfor %}]
+    - to: EMAIL
+      from: EMAIL
+      type: standard
+    - to: OTHER 2
+      from: 'OTHER '
+      type: standard
+    - to: Null Test 1
+      type: template
+      template: '{{ NULL | to_date: "%Y-%m-%d %H:%M:%S.%L" | date: "%Y-%m-%d"}}'
+    - to: Null Test 2
+      type: template
+      template: '{{ NULL | to_date | date: "%Y-%m-%d" }}'
+    - to: fixed emamil
+      type: template
+      template: |2-
+          {% assign valid_emails = "" | split: "" %}
+          {% for email in row['email'] %}
+            {% if email and email != "" %}
+              {% assign trimmed = email | strip | downcase %}
+              {% assign parts = trimmed | split: "@" %}
+              {% if parts.size == 2 %}
+                {% assign local = parts[0] %}
+                {% assign domain = parts[1] %}
+                {% if local != "" and domain contains "." and domain.size > 3 %}
+                  {% assign valid_emails = valid_emails | push: trimmed %}
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+          {{ valid_emails | remove_empty }} 
+  sheetName: Sheet1
+  configVersion: 2
+  sheetSelection: select
+  autoSyncColumns: false
+  spreadsheetInfo:
+    id: 1EcWi7kdylSpqaLphOmIOEgaTHyd8nHTRsTxBs8GlwrU
+    name: Untitled spreadsheet
+    parent: 0AHB7_51WughOUk9PVA
+schedule:
+  type: manual
+schedulePaused: false

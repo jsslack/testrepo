@@ -1,0 +1,31 @@
+model: g-sheet-formula-test
+destination: google-sheets
+config:
+  mode: mirror
+  mappings:
+    - to: row_num
+      from: row_num
+      type: standard
+      ignoreNull: true
+    - to: name
+      from: name
+      type: standard
+    - to: number
+      type: template
+      template: '{{ row[''number''] | times: 100 | round: 2 }}'
+    - to: name2
+      from: name
+      type: standard
+  sheetName: Sheet1
+  asUserEntered: true
+  configVersion: 2
+  sheetSelection: select
+  autoSyncColumns: false
+  spreadsheetInfo:
+    id: 10Rm6uHTfx21zofAaE8Ex5tj9MtKRTERiQto1uUy83pU
+    name: Formula Test
+    parent: 0AHB7_51WughOUk9PVA
+  truncateColumns: true
+schedule:
+  type: manual
+schedulePaused: false

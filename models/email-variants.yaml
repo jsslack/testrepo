@@ -1,0 +1,7 @@
+name: Email Variants
+source: google-sheets-2
+type: custom
+customQuery:
+  name: Sheet1
+  type: sheet
+primaryKey: email_domain

@@ -1,0 +1,8 @@
+name: GSheet formula test
+source: sftp
+description: checking if shit like TO_PERCENT() works
+type: custom
+customQuery:
+  path: ./hightouchtest.csv
+  type: string
+primaryKey: row_num

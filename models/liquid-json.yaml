@@ -1,0 +1,6 @@
+name: Liquid JSON
+source: giants-source
+type: raw_sql
+rawSql: '  select * from jake_ht_tests.giants where name = ''liquid_shit'''
+tableName: jake_ht_tests.giants
+primaryKey: primary_key

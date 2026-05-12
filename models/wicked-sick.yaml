@@ -1,0 +1,7 @@
+name: wicked sick
+source: rolando-test
+type: custom
+customQuery:
+  name: Sheet1
+  type: sheet
+primaryKey: EMAIL

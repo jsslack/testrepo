@@ -1,0 +1,21 @@
+model: giants-model
+destination: my-sql
+config:
+  mode: upsert
+  object: oilers
+  mappings:
+    - to: name
+      from: name
+      type: standard
+    - to: jersey_number
+      from: jersey_number
+      type: standard
+      ignoreNull: true
+  batchSize: 1000
+  configVersion: 0
+  externalIdMapping:
+    to: primary_key
+    from: primary_key
+schedule:
+  type: manual
+schedulePaused: false

@@ -1,0 +1,35 @@
+model: wicked-sick
+destination: google-sheets
+config:
+  mode: mirror
+  mappings:
+    - to: hashed
+      type: template
+      template: |-
+        {% assign emails = row['EMAIL'] | split: ', ' %}
+          [{% for email in emails %}"{{ email | strip | remove: '"' | remove: '[' | remove: ']' | md5 }}"{% unless forloop.last %},{% endunless %}{% endfor %}]
+    - to: EMAIL
+      from: EMAIL
+      type: standard
+    - to: OTHER 2
+      from: 'OTHER '
+      type: standard
+    - to: TEST_TZ
+      type: template
+      template: >-
+        {{ context['timestamp'] | to_unix | minus: 25200000 | date: "%Y-%m-%d
+        %H:%M:%S"}}
+    - to: DEAL
+      type: template
+      template: 'Check out {{ "now" | date: "%B" }}''s great deals'
+  sheetName: Sheet1
+  configVersion: 2
+  sheetSelection: select
+  autoSyncColumns: false
+  spreadsheetInfo:
+    id: 1EcWi7kdylSpqaLphOmIOEgaTHyd8nHTRsTxBs8GlwrU
+    name: Untitled spreadsheet
+    parent: 0AHB7_51WughOUk9PVA
+schedule:
+  type: manual
+schedulePaused: true
