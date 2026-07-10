@@ -30,6 +30,9 @@ sources:
     name: Google Sheets
     type: googlesheets
 destinations:
+  google-sheets-service-account:
+    name: Google Sheets (Service Account)
+    type: googleSheetsSA
   display-and-video-360:
     name: Display & Video 360
     type: display-video
@@ -48,9 +51,6 @@ destinations:
   http-request-2:
     name: "HTTP Request —\_alert test"
     type: webhookV2
-  google-sheets-service-account:
-    name: Google Sheets (Service Account)
-    type: googleSheetsSA
   csv-sftp:
     name: CSV SFTP
     type: sftp
