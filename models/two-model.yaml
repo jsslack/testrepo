@@ -1,0 +1,7 @@
+name: ' Two model'
+source: google-sheets
+type: custom
+customQuery:
+  name: Sheet1
+  type: sheet
+primaryKey: num

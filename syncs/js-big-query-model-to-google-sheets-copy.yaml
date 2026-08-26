@@ -1,0 +1,18 @@
+model: js-big-query-model
+destination: google-sheets
+config:
+  mode: insert
+  mappings:
+    - to: string_field_0
+      from: string_field_0
+      type: standard
+  sheetName: Sheet1
+  configVersion: 2
+  sheetSelection: select
+  spreadsheetInfo:
+    id: 1x4ZWTBmaU8SklfSoHhgXMFrPHkCrmGPZft-TjLUrJfE
+    name: New Sheet In Town
+    parent: 0AHB7_51WughOUk9PVA
+schedule:
+  type: manual
+schedulePaused: true
